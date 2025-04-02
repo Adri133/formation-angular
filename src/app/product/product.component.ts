@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Product } from '../model/product.interface';
 
 @Component({
   selector: 'app-product',
@@ -7,16 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './product.component.css',
 })
 export class ProductComponent {
-  title!: string;
-  price!: number;
-  imageUrl!: string;
-  description!: string;
-
-  ngOnInit() {
-    this.title = 'Casque bluetooth';
-    this.price = 129.99;
-    this.imageUrl = 'headphone.png';
-    this.description =
-      'Casque sans fil avec réduction active du bruit et autonomie de 30h. Confortable et idéal pour les appels ou la musique.';
-  }
+  @Input() product!: Product;
 }
