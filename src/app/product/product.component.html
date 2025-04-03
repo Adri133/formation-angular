@@ -1,6 +1,16 @@
 <div class="product-card">
+  <div class="image-container">
     <img [src]="product.imageUrl" [alt]="product.title" class="product-image" />
-    <h2 class="product-title">{{ product.title }}</h2>
-    <p class="product-description">{{ product.description }}</p>
-    <p class="product-price">{{ product.price }}€</p>
   </div>
+
+  <h2 class="product-title">{{ product.title }}</h2>
+  <p class="product-description">{{ product.description }}</p>
+
+  <div class="likes-count">
+    <lucide-icon name="heart" size="18" [class.product-favorite]="product.favorite"></lucide-icon>
+    <!-- <lucide-icon name="heart" size="18" [style.color]="product.favorite ? 'red' : 'black'"></lucide-icon> -->
+    <span class="like-number" [ngStyle]="{color: 'rgb(0, ' + product.likes + ', 0)'}">{{ product.likes }}</span>
+  </div>
+
+  <p class="product-price">{{ product.price }}€</p>
+</div>

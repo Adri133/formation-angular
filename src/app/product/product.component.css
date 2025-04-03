@@ -37,4 +37,12 @@
     color: #555;
     margin-bottom: 12px;
   }
+
+  .like-number {
+    margin-left: 5px;
+  }
+
+  .product-favorite {
+    color: red;
+  }
   
