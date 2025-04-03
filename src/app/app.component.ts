@@ -9,17 +9,39 @@ import { Product } from './model/product.interface';
 })
 export class AppComponent implements OnInit {
   title = 'shop';
-  product!: Product;
+  products!: Product[];
   ngOnInit(): void {
-    this.product = {
-      id: 1,
-      title: 'Casque bluetooth',
-      price: 129.99,
-      imageUrl: 'headphone.png',
-      description:
-        'Casque sans fil avec réduction active du bruit et autonomie de 30h. Confortable et idéal pour les appels ou la musique.',
-      likes: 150,
-      favorite: true,
-    };
+    this.products = [
+      {
+        id: 1,
+        title: 'Casque bluetooth',
+        price: 129.99,
+        imageUrl: 'headphone.png',
+        description:
+          'Casque sans fil avec réduction active du bruit et autonomie de 30h. Confortable et idéal pour les appels ou la musique.',
+        likes: 220,
+        favorite: true,
+      },
+      {
+        id: 2,
+        title: 'Enceite portable',
+        price: 89.9,
+        imageUrl: 'enceinte.png',
+        description:
+          'Enceinte Bluetooth portable avec une autonomie de 20 heures. Son puissant et design élégant.',
+        likes: 100,
+        favorite: false,
+      },
+      {
+        id: 3,
+        title: 'Souris ergonomique',
+        price: 45.5,
+        imageUrl: 'souris.png',
+        description:
+          'Souris ergonomique sans fil avec plusieurs boutons programmables. Idéale pour le gaming ou le travail.',
+        likes: 48,
+        favorite: true,
+      },
+    ];
   }
 }

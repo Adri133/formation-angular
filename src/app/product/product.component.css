@@ -45,4 +45,6 @@
   .product-favorite {
     color: red;
   }
-  
+  .product-hit {
+    margin-left: 5px;
+  }
