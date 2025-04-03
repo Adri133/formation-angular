@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
         imageUrl: 'headphone.png',
         description:
           'Casque sans fil avec réduction active du bruit et autonomie de 30h. Confortable et idéal pour les appels ou la musique.',
-        likes: 220,
+        likes: 201,
         favorite: true,
       },
       {

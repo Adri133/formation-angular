@@ -9,4 +9,9 @@ import { Product } from '../model/product.interface';
 })
 export class ProductComponent {
   @Input() product!: Product;
+
+  addToFavorites() {
+    this.product.favorite = !this.product.favorite;
+    this.product.likes += this.product.favorite ? 1 : -1;
+  }
 }
