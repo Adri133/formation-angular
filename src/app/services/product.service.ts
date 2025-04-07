@@ -1,17 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { Product } from './models/product.interface';
+import { Injectable } from '@angular/core';
+import { Product } from '../models/product.interface';
 
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  standalone: false,
-  styleUrl: './app.component.css',
+@Injectable({
+  providedIn: 'root',
 })
-export class AppComponent implements OnInit {
-  title = 'shop';
-  products!: Product[];
-  ngOnInit(): void {
-    this.products = [
+export class ProductService {
+  constructor() {}
+
+  public getProducts(): Product[] {
+    return [
       {
         id: 1,
         title: 'Casque bluetooth',
