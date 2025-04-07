@@ -3,15 +3,24 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProductComponent } from './product/product.component';
+import { ProductCardComponent } from './product-card/product-card.component';
 import { Heart, LucideAngularModule } from 'lucide-angular';
 import { ProductListComponent } from './product-list/product-list.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @NgModule({
-  declarations: [AppComponent, ProductComponent, ProductListComponent, HomeComponent, NavbarComponent, FooterComponent],
+  declarations: [
+    AppComponent,
+    ProductCardComponent,
+    ProductListComponent,
+    HomeComponent,
+    NavbarComponent,
+    FooterComponent,
+    ProductDetailComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

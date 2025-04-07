@@ -44,4 +44,8 @@ export class ProductService {
       },
     ];
   }
+
+  public getProductById(id: number): Product | undefined {
+    return this.getProducts().find((product) => product.id === id);
+  }
 }

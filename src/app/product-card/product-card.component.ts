@@ -2,12 +2,12 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Product } from '../models/product.interface';
 
 @Component({
-  selector: 'app-product',
+  selector: 'app-product-card',
   standalone: false,
-  templateUrl: './product.component.html',
-  styleUrl: './product.component.css',
+  templateUrl: './product-card.component.html',
+  styleUrl: './product-card.component.css',
 })
-export class ProductComponent {
+export class ProductCardComponent {
   @Input() product!: Product;
 
   addToFavorites() {
