@@ -6,4 +6,5 @@ export interface Product {
   description: string;
   likes: number;
   favorite: boolean;
+  availableUntil: Date;
 }

@@ -3,7 +3,7 @@
     <img [src]="product.imageUrl" [alt]="product.title" class="product-image" />
   </div>
   
-  <h2 class="product-title">{{ product.title }}</h2>
+  <h2 class="product-title">{{ product.title | titlecase }}</h2>
   <p class="product-description">{{ product.description }}</p>
   
   <div class="likes-count">
@@ -11,6 +11,6 @@
     <span class="like-number" [ngStyle]="{color: 'rgb(0, ' + product.likes + ', 0)'}">{{ product.likes }}</span>
     <span *ngIf="product.likes > 200" class="product-hit">Coup de <lucide-icon name="heart" size="18"></lucide-icon></span>
   </div>
-  <p class="product-price">{{ product.price }}€</p>
-  
+  <p class="product-price">{{ product.price | currency:'EUR':'symbol':'1.2-2' }}</p>
+  <p >{{product.availableUntil | date:'yyyy-MM-dd' }}</p>
 </div>

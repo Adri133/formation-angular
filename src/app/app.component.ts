@@ -21,6 +21,7 @@ export class AppComponent implements OnInit {
           'Casque sans fil avec réduction active du bruit et autonomie de 30h. Confortable et idéal pour les appels ou la musique.',
         likes: 201,
         favorite: true,
+        availableUntil: new Date('2023-12-31'),
       },
       {
         id: 2,
@@ -31,6 +32,7 @@ export class AppComponent implements OnInit {
           'Enceinte Bluetooth portable avec une autonomie de 20 heures. Son puissant et design élégant.',
         likes: 100,
         favorite: false,
+        availableUntil: new Date('2023-12-31'),
       },
       {
         id: 3,
@@ -41,6 +43,7 @@ export class AppComponent implements OnInit {
           'Souris ergonomique sans fil avec plusieurs boutons programmables. Idéale pour le gaming ou le travail.',
         likes: 48,
         favorite: true,
+        availableUntil: new Date('2023-12-31'),
       },
     ];
   }
