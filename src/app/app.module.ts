@@ -13,6 +13,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ProductAddComponent } from './product-add/product-add.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ProductInputComponent } from './product-input/product-input.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ProductDetailComponent,
     NotFoundComponent,
     ProductAddComponent,
+    ProductInputComponent,
   ],
   imports: [
     BrowserModule,

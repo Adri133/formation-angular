@@ -1,0 +1,14 @@
+<h2>Ajouter un produit</h2>
+
+<input #title type="text" placeholder="Nom du produit" />
+<input #price type="number" placeholder="Prix" />
+<input #imageUrl type="text" placeholder="Image URL" />
+<button (click)="addProduct(title.value, price.value, imageUrl.value)">Ajouter</button>
+
+<hr />
+
+<div *ngIf="product">
+  <h3>{{ product.title }}</h3>
+  <p>Prix : {{ product.price }} €</p>
+  <img [src]="product.imageUrl" alt="Image du produit" width="200" />
+</div>
