@@ -1,0 +1,31 @@
+<form (ngSubmit)="addProduct()" class="product-form">
+    <h2>
+        Add New Product
+    </h2>
+    <div class="form-group">
+        <label for="productTitle">Product Title</label>
+        <input type="text" id="productTitle" [(ngModel)]="product.title" name="tilte" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="productPrice">Product Price</label>
+        <input type="number" id="productPrice" [(ngModel)]="product.price" name="price" required>
+    </div>
+
+    <div class="form-group">
+        <label for="productDescription">Product Description</label>
+        <textarea id="productDescription" [(ngModel)]="product.description" name="description" required></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="productImageUrl">Product Image URL</label>
+        <input type="text" id="productImageUrl" [(ngModel)]="product.imageUrl" name="imageUrl" required>
+    </div>
+
+    <div class="form-group">
+        <label for="productAvailableUntil">Product Available Until</label>
+        <input type="date" id="productAvailableUntil" [(ngModel)]="product.availableUntil" name="availableUntil" required>
+    </div>
+    
+    <button type="submit">Add Product</button>
+</form>

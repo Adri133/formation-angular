@@ -11,6 +11,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { ProductAddComponent } from './product-add/product-add.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,11 +24,13 @@ import { NotFoundComponent } from './not-found/not-found.component';
     FooterComponent,
     ProductDetailComponent,
     NotFoundComponent,
+    ProductAddComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     LucideAngularModule.pick({ Heart }),
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
