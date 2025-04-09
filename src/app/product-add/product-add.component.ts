@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../models/product.interface';
-import { FormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-product-add',
@@ -10,25 +10,26 @@ import { FormsModule } from '@angular/forms';
 })
 export class ProductAddComponent implements OnInit {
   product!: Product;
+  productForm!: FormGroup;
 
-  constructor() {}
+  constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {
-    // Initialization logic can go here
-    this.product = {
-      id: 0,
-      title: '',
-      price: 0,
-      imageUrl: '',
-      description: '',
-      likes: 0,
-      favorite: false,
-      availableUntil: new Date(),
-    };
+    this.productForm = this.fb.group({
+      id: [0],
+      title: [''],
+      price: [0],
+      imageUrl: [''],
+      description: [''],
+      likes: [0],
+      favorite: [false],
+      availableUntil: [new Date()],
+    });
   }
 
   addProduct() {
-    // Logic to add the product
+    // Add product form values to product
+    this.product = this.productForm.value;
     console.log('Product added:', this.product);
   }
 }
