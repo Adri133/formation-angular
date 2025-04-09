@@ -16,13 +16,10 @@ export class ProductAddComponent implements OnInit {
 
   ngOnInit(): void {
     this.productForm = this.fb.group({
-      id: [0],
       title: [''],
       price: [0],
       imageUrl: [''],
       description: [''],
-      likes: [0],
-      favorite: [false],
       availableUntil: [new Date()],
     });
   }
