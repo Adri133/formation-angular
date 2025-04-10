@@ -10,16 +10,17 @@ import { Product } from '../models/product.interface';
 export class ProductInputComponent {
   product!: Product;
 
-  addProduct(title: string, price: string, imageUrl: string): void {
+  addProduct(title: string, price: string, image: string): void {
     this.product = {
       id: 0,
       title,
       price: +price, // conversion en number
-      imageUrl,
+      image,
       description: '',
       likes: 0,
       favorite: false,
       availableUntil: new Date(),
+      category: '',
     };
   }
 }

@@ -1,10 +1,11 @@
 export interface Product {
-  id: number;
+  id?: number;
   title: string;
   price: number;
-  imageUrl: string;
+  image: string;
   description: string;
-  likes: number;
-  favorite: boolean;
-  availableUntil: Date;
+  category: string;
+  likes?: number;
+  favorite?: boolean;
+  availableUntil?: Date;
 }

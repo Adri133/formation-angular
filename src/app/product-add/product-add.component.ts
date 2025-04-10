@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from '../models/product.interface';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { forbiddenWordsValidator } from '../validators/custom-validators';
+import { ProductService } from '../services/product.service';
 
 @Component({
   selector: 'app-product-add',
@@ -13,7 +14,10 @@ export class ProductAddComponent implements OnInit {
   product!: Product;
   productForm!: FormGroup;
 
-  constructor(private fb: FormBuilder) {}
+  constructor(
+    private fb: FormBuilder,
+    private productService: ProductService
+  ) {}
 
   ngOnInit(): void {
     this.productForm = this.fb.group({
@@ -36,7 +40,7 @@ export class ProductAddComponent implements OnInit {
     // Add product form values to product
     if (this.productForm.valid) {
       this.product = this.productForm.value;
-      console.log('Product added:', this.product);
+      this.productService.addProduct(this.product);
     }
   }
 }

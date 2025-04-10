@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from '../models/product.interface';
 import { ProductService } from '../services/product.service';
 import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-product-detail',
@@ -10,7 +11,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './product-detail.component.css',
 })
 export class ProductDetailComponent implements OnInit {
-  product!: Product;
+  product$!: Observable<Product>;
 
   constructor(
     private productService: ProductService,
@@ -19,11 +20,13 @@ export class ProductDetailComponent implements OnInit {
 
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.product = this.productService.getProductById(id)!;
+    this.product$ = this.productService.getProduct(id)!;
   }
 
   addToFavorites() {
-    this.product.favorite = !this.product.favorite;
-    this.product.likes += this.product.favorite ? 1 : -1;
+    this.product$.subscribe((product) => {
+      product.favorite = !product.favorite;
+      product.likes = (product.likes || 0) + (product.favorite ? 1 : -1);
+    });
   }
 }

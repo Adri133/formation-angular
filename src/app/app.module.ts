@@ -15,6 +15,7 @@ import { ProductAddComponent } from './product-add/product-add.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProductInputComponent } from './product-input/product-input.component';
 import { CounterComponent } from './counter/counter.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { CounterComponent } from './counter/counter.component';
     AppRoutingModule,
     LucideAngularModule.pick({ Heart }),
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

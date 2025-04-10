@@ -1,15 +1,15 @@
-<div class="product-detail" *ngIf="product">
-    <img [src]="product.imageUrl" [alt]="product.title" class="product-image" />
+<div class="product-detail" *ngIf="product$ | async as product">
+    <img [src]="product.image" [alt]="product.title" class="product-image" />
   
     <div class="product-info">
       <h1>{{ product.title }}</h1>
       <p class="description">{{ product.description }}</p>
       <p class="price">{{ product.price | currency:'EUR' }}</p>
   
-      <button class="like-btn" (click)="addToFavorites()">
+      <!-- <button class="like-btn" (click)="addToFavorites()">
         <span [ngClass]="{ 'liked': product.favorite }">❤️</span>
         {{ product.likes }} likes
-      </button>
+      </button> -->
     </div>
 </div>
   
