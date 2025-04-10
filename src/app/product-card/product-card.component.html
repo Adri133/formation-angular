@@ -14,5 +14,5 @@
   <p class="product-price">{{ product.price | currency:'EUR':'symbol':'1.2-2' }}</p>
   <p >{{product.availableUntil | date:'yyyy-MM-dd' }}</p>
   <a [routerLink]="['/products', product.id]" class="view-link">Voir le produit</a>
-
+  <button (click)="onDelete()">Supprimer</button>
 </div>

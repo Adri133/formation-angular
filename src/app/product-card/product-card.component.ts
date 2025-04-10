@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Product } from '../models/product.interface';
 
 @Component({
@@ -9,9 +9,14 @@ import { Product } from '../models/product.interface';
 })
 export class ProductCardComponent {
   @Input() product!: Product;
+  @Output() delete = new EventEmitter<void>();
 
   addToFavorites() {
     this.product.favorite = !this.product.favorite;
     this.product.likes += this.product.favorite ? 1 : -1;
+  }
+
+  onDelete() {
+    this.delete.emit();
   }
 }

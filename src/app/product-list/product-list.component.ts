@@ -18,4 +18,8 @@ export class ProductListComponent implements OnInit {
   ngOnInit(): void {
     this.productService.getProducts();
   }
+
+  remove(index: number) {
+    this.productService.deleteProduct(index + 1);
+  }
 }
