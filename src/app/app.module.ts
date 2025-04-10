@@ -14,6 +14,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { ProductAddComponent } from './product-add/product-add.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProductInputComponent } from './product-input/product-input.component';
+import { CounterComponent } from './counter/counter.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ProductInputComponent } from './product-input/product-input.component';
     NotFoundComponent,
     ProductAddComponent,
     ProductInputComponent,
+    CounterComponent,
   ],
   imports: [
     BrowserModule,

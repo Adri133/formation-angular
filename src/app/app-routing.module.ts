@@ -6,9 +6,11 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ProductAddComponent } from './product-add/product-add.component';
 import { ProductInputComponent } from './product-input/product-input.component';
+import { CounterComponent } from './counter/counter.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'counter', component: CounterComponent },
   { path: 'products', component: ProductListComponent },
   { path: 'products/add', component: ProductAddComponent },
   { path: 'products/input', component: ProductInputComponent },
