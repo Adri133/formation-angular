@@ -19,7 +19,7 @@ export class ProductListComponent implements OnInit {
     this.productService.getProducts();
   }
 
-  remove(index: number) {
-    this.productService.deleteProduct(index + 1);
+  remove(id: number) {
+    this.productService.deleteProduct(id);
   }
 }

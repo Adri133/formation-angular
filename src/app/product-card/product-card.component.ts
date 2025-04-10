@@ -9,7 +9,7 @@ import { Product } from '../models/product.interface';
 })
 export class ProductCardComponent {
   @Input() product!: Product;
-  @Output() delete = new EventEmitter<void>();
+  @Output() delete = new EventEmitter<number>();
 
   addToFavorites() {
     this.product.favorite = !this.product.favorite;
@@ -17,6 +17,6 @@ export class ProductCardComponent {
   }
 
   onDelete() {
-    this.delete.emit();
+    this.delete.emit(this.product.id);
   }
 }
