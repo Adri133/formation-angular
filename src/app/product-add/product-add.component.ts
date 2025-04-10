@@ -17,7 +17,6 @@ export class ProductAddComponent implements OnInit {
 
   ngOnInit(): void {
     this.productForm = this.fb.group({
-      id: [0],
       title: [
         '',
         [
@@ -29,8 +28,6 @@ export class ProductAddComponent implements OnInit {
       price: [0, [Validators.required, Validators.min(0.1)]],
       imageUrl: ['', [Validators.required]],
       description: ['', [Validators.required, Validators.minLength(10)]],
-      likes: [0],
-      favorite: [false],
       availableUntil: [new Date(), [Validators.required]],
     });
   }
