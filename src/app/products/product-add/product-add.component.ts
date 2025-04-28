@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../models/product.interface';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { forbiddenWordsValidator } from '../validators/custom-validators';
 import { ProductService } from '../services/product.service';
+import { forbiddenWordsValidator } from '../validators/custom-validators';
 
 @Component({
   selector: 'app-product-add',

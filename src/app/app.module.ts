@@ -3,49 +3,32 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProductCardComponent } from './product-card/product-card.component';
-import { Heart, LucideAngularModule } from 'lucide-angular';
-import { ProductListComponent } from './product-list/product-list.component';
+import { Heart, LucideAngularModule, Share } from 'lucide-angular';
 import { HomeComponent } from './home/home.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { FooterComponent } from './footer/footer.component';
-import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { ProductAddComponent } from './product-add/product-add.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { ProductInputComponent } from './product-input/product-input.component';
 import { CounterComponent } from './counter/counter.component';
-import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { HttpClientModule } from '@angular/common/http';
+import { ProductsModule } from './products/products.module';
+import { CoreModule } from './core/core.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductCardComponent,
-    ProductListComponent,
     HomeComponent,
-    NavbarComponent,
-    FooterComponent,
-    ProductDetailComponent,
     NotFoundComponent,
-    ProductAddComponent,
-    ProductInputComponent,
     CounterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     LucideAngularModule.pick({ Heart }),
-    ReactiveFormsModule,
     HttpClientModule,
+    ProductsModule,
+    CoreModule,
+    SharedModule,
   ],
-  providers: [
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: AuthInterceptor,
-      multi: true,
-    },
-  ],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

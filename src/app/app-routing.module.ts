@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { ProductListComponent } from './product-list/product-list.component';
-import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ProductListComponent } from './products/product-list/product-list.component';
+import { ProductDetailComponent } from './products/product-detail/product-detail.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { ProductAddComponent } from './product-add/product-add.component';
-import { ProductInputComponent } from './product-input/product-input.component';
+import { ProductAddComponent } from './products/product-add/product-add.component';
+import { ProductInputComponent } from './products/product-input/product-input.component';
 import { CounterComponent } from './counter/counter.component';
 
 const routes: Routes = [
