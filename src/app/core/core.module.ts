@@ -4,10 +4,11 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [NavbarComponent, FooterComponent],
-  imports: [CommonModule],
+  imports: [CommonModule, SharedModule],
   exports: [NavbarComponent, FooterComponent],
   providers: [
     {
