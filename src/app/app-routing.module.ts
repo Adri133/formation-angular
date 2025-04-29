@@ -13,6 +13,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./products/products.module').then((m) => m.ProductsModule),
   },
+  {
+    path: 'profile',
+    loadComponent: () =>
+      import('./user-profile/user-profile.component').then(
+        (m) => m.UserProfileComponent
+      ),
+  },
   { path: '**', redirectTo: 'not-found' },
 ];
 
