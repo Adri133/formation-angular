@@ -1,5 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCardModule } from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,6 +32,10 @@ import { SharedModule } from './shared/shared.module';
     ProductsModule,
     CoreModule,
     SharedModule,
+    MatCardModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatGridListModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

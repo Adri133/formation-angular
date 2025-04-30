@@ -1,11 +1,6 @@
 .product-card {
     width: 260px;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    padding: 16px;
-    background-color: #fff;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin: 16px;
     transition: transform 0.2s ease-in-out;
   }
   
@@ -14,10 +9,16 @@
   }
   
   .product-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
+    height: 200px;
     object-fit: cover;
+  }
+  
+  mat-card-header {
+    padding: 16px 16px 0;
+  }
+  
+  mat-card-content {
+    padding: 16px;
   }
   
   .product-title {
@@ -30,6 +31,7 @@
     font-size: 16px;
     color: #2e7d32;
     font-weight: 500;
+    margin: 8px 0;
   }
   
   .product-description {
@@ -47,4 +49,11 @@
   }
   .product-hit {
     margin-left: 5px;
+  }
+
+  mat-card-actions {
+    padding: 8px 16px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
   }

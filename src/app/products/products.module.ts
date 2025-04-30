@@ -8,6 +8,8 @@ import { ProductAddComponent } from './product-add/product-add.component';
 import { ProductInputComponent } from './product-input/product-input.component';
 import { RouterModule } from '@angular/router';
 import { ProductsRoutingModule } from './products-routing.module';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { ProductsRoutingModule } from './products-routing.module';
     ReactiveFormsModule,
     RouterModule,
     ProductsRoutingModule,
+    MatCardModule,
+    MatButtonModule,
   ],
   exports: [ProductListComponent],
 })
