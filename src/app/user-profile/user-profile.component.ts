@@ -4,7 +4,6 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-user-profile',
   imports: [CommonModule],
-  standalone: true,
   templateUrl: './user-profile.component.html',
   styleUrl: './user-profile.component.css',
 })
