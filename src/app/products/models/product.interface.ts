@@ -8,4 +8,5 @@ export interface Product {
   likes?: number;
   favorite?: boolean;
   availableUntil?: Date;
+  qty?: number;
 }

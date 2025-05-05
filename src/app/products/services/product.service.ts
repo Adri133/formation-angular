@@ -30,4 +30,8 @@ export class ProductService {
   deleteProduct(id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
+
+  isInStock({ qty }: Product): boolean {
+    return (qty ?? 0) > 0;
+  }
 }
